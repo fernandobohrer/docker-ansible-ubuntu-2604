@@ -12,6 +12,6 @@ repos:
       - id: yamllint
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.21.0
+    rev: v0.24.0
     hooks:
       - id: markdownlint-cli2
