@@ -6,7 +6,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 ENV PIP_PACKAGES="ansible"
 
-RUN apt-get update \
+RUN echo 'APT::Get::Always-Include-Phased-Updates "true";' > /etc/apt/apt.conf.d/99phased-updates \
+    && apt-get update \
     && apt-get -y install --no-install-recommends \
         python3-pip \
         sudo \
